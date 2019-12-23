@@ -4,7 +4,7 @@ RUN apk update && \
     apk upgrade && \
     apk add git
 
-RUN mkdir /keys && mkdir /script
+RUN mkdir /keys && mkdir /script && mkdir ~/.ssh
 ADD git_sync.sh /script
 RUN chmod +x /script/git_sync.sh
 
