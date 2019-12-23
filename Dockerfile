@@ -2,7 +2,7 @@ FROM alpine:latest
 
 RUN apk update && \
     apk upgrade && \
-    apk add git
+    apk add git openssh-client
 
 RUN mkdir /keys && mkdir /script && mkdir ~/.ssh
 ADD git_sync.sh /script
